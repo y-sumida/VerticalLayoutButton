@@ -12,6 +12,7 @@
 		A99151EB1FE1600700D4059D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A99151E91FE1600700D4059D /* Main.storyboard */; };
 		A99151ED1FE1600700D4059D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A99151EC1FE1600700D4059D /* Assets.xcassets */; };
 		A99151F01FE1600700D4059D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A99151EE1FE1600700D4059D /* LaunchScreen.storyboard */; };
+		A99151FA1FE1624E00D4059D /* VerticalLayoutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99151F91FE1624E00D4059D /* VerticalLayoutButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		A99151EC1FE1600700D4059D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A99151EF1FE1600700D4059D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A99151F11FE1600700D4059D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A99151F91FE1624E00D4059D /* VerticalLayoutButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalLayoutButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				A99151E51FE1600700D4059D /* AppDelegate.swift */,
 				A99151E71FE1600700D4059D /* ViewController.swift */,
+				A99151F91FE1624E00D4059D /* VerticalLayoutButton.swift */,
 				A99151E91FE1600700D4059D /* Main.storyboard */,
 				A99151EC1FE1600700D4059D /* Assets.xcassets */,
 				A99151EE1FE1600700D4059D /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A99151E81FE1600700D4059D /* ViewController.swift in Sources */,
+				A99151FA1FE1624E00D4059D /* VerticalLayoutButton.swift in Sources */,
 				A99151E61FE1600700D4059D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
