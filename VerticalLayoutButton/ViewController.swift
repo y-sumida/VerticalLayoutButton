@@ -13,6 +13,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //button.setTitle("s", for: .normal)
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +21,8 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func tapButton(_ sender: Any) {
+    }
+    
 }
 
