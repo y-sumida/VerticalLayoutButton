@@ -14,19 +14,41 @@ class VerticalLayoutButton: UIButton {
 
         self.contentVerticalAlignment = .top
         self.contentHorizontalAlignment = .left
+
         // アイコンとラベルを縦に並べてセンタリング
-        self.titleLabel?.sizeToFit()
-        let labelWidth = self.titleLabel!.frame.size.width
-        let labelHeight = self.titleLabel!.frame.size.height
-        let imageWidth = self.imageView?.frame.size.width ?? 0
-        let imageHeight = self.imageView?.frame.size.height ?? 0
+        var labelWidth: CGFloat = 0.0
+        var labelHeight: CGFloat = 0.0
+        if let _ = self.titleLabel?.text {
+            self.titleLabel?.sizeToFit()
+            labelWidth = self.titleLabel?.frame.size.width ?? 0
+            labelHeight = self.titleLabel?.frame.size.height ?? 0
+        }
+
+        var imageWidth: CGFloat = 0.0
+        var imageHeight: CGFloat = 0.0
+        if let _ = self.imageView?.image {
+            imageWidth = self.imageView?.frame.size.width ?? 0
+            imageHeight = self.imageView?.frame.size.height ?? 0
+        }
 
         var imageLeftInset:CGFloat = 0.0
         var labelLeftInset:CGFloat = 0.0
-        if imageWidth < labelWidth {
+        var contentBottomInset: CGFloat = 0.0
+        var contentRightInset: CGFloat = 0.0
+
+        switch (imageWidth, labelWidth) {
+        case (0, _), (_, 0):
+            break
+        case (let imageWidth, let labelWidth) where imageWidth < labelWidth:
             imageLeftInset = (labelWidth - imageWidth) / 2
-        } else {
+            contentBottomInset = (labelHeight + imageHeight) - rect.height
+            contentRightInset = -1.0 * (rect.size.width - labelWidth)
+        case (let imageWidth, let labelWidth) where imageWidth >= labelWidth:
             labelLeftInset = (imageWidth - labelWidth) / 2
+            contentBottomInset = (labelHeight + imageHeight) - rect.height
+            contentRightInset = -1.0 * (rect.size.width - imageWidth)
+        case (_, _):
+            break
         }
 
         // imageEdgeInsets
@@ -36,7 +58,6 @@ class VerticalLayoutButton: UIButton {
         self.titleEdgeInsets = UIEdgeInsets(top: imageHeight, left: -1.0 * (imageWidth + labelLeftInset), bottom: 0, right: 0)
 
         // contentEdgeInsets
-        let bottomInset = (labelHeight + imageHeight) - rect.height
-        self.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: bottomInset, right: -1.0 * (rect.size.width - labelWidth))
+        self.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: contentBottomInset, right: contentRightInset)
     }
 }

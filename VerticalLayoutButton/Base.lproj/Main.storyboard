@@ -18,18 +18,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JjM-U7-LeL" customClass="VerticalLayoutButton" customModule="VerticalLayoutButton" customModuleProvider="target">
-                                <rect key="frame" x="136.5" y="318" width="102" height="30"/>
+                                <rect key="frame" x="137" y="318" width="102" height="30"/>
                                 <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="5"/>
+                                <inset key="imageEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="5"/>
                                 <state key="normal" title="Setting" image="setting">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="tapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zRG-tz-cEA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEh-oM-Kmw" customClass="VerticalLayoutButton" customModule="VerticalLayoutButton" customModuleProvider="target">
+                                <rect key="frame" x="164" y="376" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.62771045290000005" blue="0.66117453349999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="JjM-U7-LeL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9wD-1i-X8Y"/>
+                            <constraint firstItem="dEh-oM-Kmw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TsP-Lb-qp4"/>
                             <constraint firstItem="JjM-U7-LeL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oee-76-TR9"/>
+                            <constraint firstItem="dEh-oM-Kmw" firstAttribute="top" secondItem="JjM-U7-LeL" secondAttribute="bottom" constant="28" id="wm0-aQ-QhE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
