@@ -14,6 +14,11 @@ class VerticalLayoutButton: UIButton {
         resetInsets()
     }
 
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        resetInsets()
+    }
+
     override func draw(_ rect: CGRect) {
         super.draw(rect)
 
