@@ -20,6 +20,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JjM-U7-LeL" customClass="VerticalLayoutButton" customModule="VerticalLayoutButton" customModuleProvider="target">
                                 <rect key="frame" x="126" y="318" width="124" height="30"/>
                                 <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="124" id="csL-vN-s8e"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <inset key="contentEdgeInsets" minX="22" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="5"/>
@@ -39,8 +42,8 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="JjM-U7-LeL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RW4-DP-Zpq"/>
                             <constraint firstItem="dEh-oM-Kmw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TsP-Lb-qp4"/>
-                            <constraint firstItem="JjM-U7-LeL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="126" id="epF-Gx-uUZ"/>
                             <constraint firstItem="JjM-U7-LeL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oee-76-TR9"/>
                             <constraint firstItem="dEh-oM-Kmw" firstAttribute="top" secondItem="JjM-U7-LeL" secondAttribute="bottom" constant="28" id="wm0-aQ-QhE"/>
                         </constraints>

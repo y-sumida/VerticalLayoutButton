@@ -45,6 +45,7 @@ class VerticalLayoutButton: UIButton {
         var imageLeftInset:CGFloat = 0.0
         var labelLeftInset:CGFloat = 0.0
         var contentBottomInset: CGFloat = 0.0
+        var contentLeftInset: CGFloat = 0.0
         var contentRightInset: CGFloat = 0.0
 
         switch (imageWidth, labelWidth) {
@@ -54,11 +55,13 @@ class VerticalLayoutButton: UIButton {
             imageLeftInset = diffWidth / 2
             labelLeftInset = -1.0 * imageWidth
             contentBottomInset = (labelHeight + imageHeight) - rect.height
-            contentRightInset = -1.0 * (rect.size.width - labelWidth)
+            contentLeftInset = (rect.size.width - labelWidth) / 2
+            contentRightInset = -1.0 * contentLeftInset
         case (let imageWidth, let labelWidth) where imageWidth >= labelWidth:
             labelLeftInset = -1.0 * (labelWidth + diffWidth / 2)
             contentBottomInset = (labelHeight + imageHeight) - rect.height
-            contentRightInset = -1.0 * (rect.size.width - imageWidth)
+            contentLeftInset = (rect.size.width - imageWidth) / 2
+            contentRightInset = -1.0 * contentLeftInset
         case (_, _):
             break
         }
@@ -70,7 +73,7 @@ class VerticalLayoutButton: UIButton {
         self.titleEdgeInsets = UIEdgeInsets(top: imageHeight, left: labelLeftInset, bottom: 0, right: 0)
 
         // contentEdgeInsets
-        self.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: contentBottomInset, right: contentRightInset)
+        self.contentEdgeInsets = UIEdgeInsets(top: 0, left: contentLeftInset, bottom: contentBottomInset, right: contentRightInset)
     }
 
     private func resetInsets() {
