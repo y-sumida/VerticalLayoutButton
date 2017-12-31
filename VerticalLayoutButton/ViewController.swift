@@ -13,7 +13,16 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //button.setTitle("s", for: .normal)
+
+        let b = VerticalLayoutButton()
+        b.setTitle("code", for: .normal)
+        b.setTitleColor(UIColor.red, for: .normal)
+        b.setImage(UIImage(named: "setting"), for: .normal)
+        b.backgroundColor = UIColor.lightGray
+        self.view.addSubview(b)
+        b.translatesAutoresizingMaskIntoConstraints = false
+        b.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16).isActive = true
+        b.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 20).isActive = true
     }
 
     override func didReceiveMemoryWarning() {
