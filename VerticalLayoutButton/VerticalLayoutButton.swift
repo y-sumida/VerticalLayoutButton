@@ -21,6 +21,8 @@ class VerticalLayoutButton: UIButton {
 
     override func draw(_ rect: CGRect) {
         super.draw(rect)
+        // 制約で幅高さが決まってない場合imageとlabelによってrectが決まる
+        // 幅高さ指定がある場合は、image/labelと関係なくrectが決まる
 
         self.contentVerticalAlignment = .top
         self.contentHorizontalAlignment = .left
@@ -42,6 +44,8 @@ class VerticalLayoutButton: UIButton {
         }
         let diffWidth = abs(imageWidth - labelWidth)
 
+        let buttonWidth = (labelWidth + imageWidth).rounded(.up)
+
         var imageLeftInset:CGFloat = 0.0
         var labelLeftInset:CGFloat = 0.0
         var contentBottomInset: CGFloat = 0.0
@@ -55,13 +59,23 @@ class VerticalLayoutButton: UIButton {
             imageLeftInset = diffWidth / 2
             labelLeftInset = -1.0 * imageWidth
             contentBottomInset = (labelHeight + imageHeight) - rect.height
-            contentLeftInset = (rect.size.width - labelWidth) / 2
-            contentRightInset = -1.0 * contentLeftInset
+            if buttonWidth < rect.width {
+                contentLeftInset = (rect.size.width - labelWidth) / 2
+                contentRightInset = -1.0 * contentLeftInset
+            } else {
+                contentLeftInset = 0
+                contentRightInset = -1.0 * (rect.size.width - labelWidth)
+            }
         case (let imageWidth, let labelWidth) where imageWidth >= labelWidth:
             labelLeftInset = -1.0 * (labelWidth + diffWidth / 2)
             contentBottomInset = (labelHeight + imageHeight) - rect.height
-            contentLeftInset = (rect.size.width - imageWidth) / 2
-            contentRightInset = -1.0 * contentLeftInset
+            if buttonWidth < rect.width {
+                contentLeftInset = (rect.size.width - imageWidth) / 2
+                contentRightInset = -1.0 * contentLeftInset
+            } else {
+                contentLeftInset = 0
+                contentRightInset = -1.0 * (rect.size.width - imageWidth)
+            }
         case (_, _):
             break
         }
