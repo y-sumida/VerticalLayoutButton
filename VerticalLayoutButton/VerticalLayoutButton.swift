@@ -48,6 +48,7 @@ class VerticalLayoutButton: UIButton {
 
         var imageLeftInset:CGFloat = 0.0
         var labelLeftInset:CGFloat = 0.0
+        var contentTopInset: CGFloat = 0.0
         var contentBottomInset: CGFloat = 0.0
         var contentLeftInset: CGFloat = 0.0
         var contentRightInset: CGFloat = 0.0
@@ -58,7 +59,6 @@ class VerticalLayoutButton: UIButton {
         case (let imageWidth, let labelWidth) where imageWidth < labelWidth:
             imageLeftInset = diffWidth / 2
             labelLeftInset = -1.0 * imageWidth
-            contentBottomInset = (labelHeight + imageHeight) - rect.height
             if baseWidth < rect.width {
                 contentLeftInset = (rect.size.width - labelWidth) / 2
                 contentRightInset = -1.0 * contentLeftInset
@@ -68,7 +68,6 @@ class VerticalLayoutButton: UIButton {
             }
         case (let imageWidth, let labelWidth) where imageWidth >= labelWidth:
             labelLeftInset = -1.0 * (labelWidth + diffWidth / 2)
-            contentBottomInset = (labelHeight + imageHeight) - rect.height
             if baseWidth < rect.width {
                 contentLeftInset = (rect.size.width - imageWidth) / 2
                 contentRightInset = -1.0 * contentLeftInset
@@ -80,6 +79,15 @@ class VerticalLayoutButton: UIButton {
             break
         }
 
+        // 高さ制約ありの場合の対応
+        if (labelHeight + imageHeight) < rect.height {
+            contentTopInset = (rect.height - (labelHeight + imageHeight)) / 2
+            contentBottomInset = (rect.height - (labelHeight + imageHeight)) / 2
+        } else {
+            contentTopInset = 0
+            contentBottomInset = (labelHeight + imageHeight) - rect.height
+        }
+
         // imageEdgeInsets
         self.imageEdgeInsets = UIEdgeInsets(top: 0, left: imageLeftInset, bottom: 0, right: 0)
 
@@ -87,7 +95,7 @@ class VerticalLayoutButton: UIButton {
         self.titleEdgeInsets = UIEdgeInsets(top: imageHeight, left: labelLeftInset, bottom: 0, right: 0)
 
         // contentEdgeInsets
-        self.contentEdgeInsets = UIEdgeInsets(top: 0, left: contentLeftInset, bottom: contentBottomInset, right: contentRightInset)
+        self.contentEdgeInsets = UIEdgeInsets(top: contentTopInset, left: contentLeftInset, bottom: contentBottomInset, right: contentRightInset)
     }
 
     private func resetInsets() {
