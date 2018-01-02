@@ -44,7 +44,7 @@ class VerticalLayoutButton: UIButton {
         }
         let diffWidth = abs(imageWidth - labelWidth)
 
-        let buttonWidth = (labelWidth + imageWidth).rounded(.up)
+        let baseWidth = (labelWidth + imageWidth).rounded(.up)
 
         var imageLeftInset:CGFloat = 0.0
         var labelLeftInset:CGFloat = 0.0
@@ -59,7 +59,7 @@ class VerticalLayoutButton: UIButton {
             imageLeftInset = diffWidth / 2
             labelLeftInset = -1.0 * imageWidth
             contentBottomInset = (labelHeight + imageHeight) - rect.height
-            if buttonWidth < rect.width {
+            if baseWidth < rect.width {
                 contentLeftInset = (rect.size.width - labelWidth) / 2
                 contentRightInset = -1.0 * contentLeftInset
             } else {
@@ -69,7 +69,7 @@ class VerticalLayoutButton: UIButton {
         case (let imageWidth, let labelWidth) where imageWidth >= labelWidth:
             labelLeftInset = -1.0 * (labelWidth + diffWidth / 2)
             contentBottomInset = (labelHeight + imageHeight) - rect.height
-            if buttonWidth < rect.width {
+            if baseWidth < rect.width {
                 contentLeftInset = (rect.size.width - imageWidth) / 2
                 contentRightInset = -1.0 * contentLeftInset
             } else {
