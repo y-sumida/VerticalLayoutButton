@@ -55,7 +55,8 @@ class VerticalLayoutButton: UIButton {
 
         switch (imageWidth, labelWidth) {
         case (0, _), (_, 0):
-            break
+            // タイトル、アイコンが揃ってなかったら何もしない
+            return
         case (let imageWidth, let labelWidth) where imageWidth < labelWidth:
             imageLeftInset = diffWidth / 2
             labelLeftInset = -1.0 * imageWidth
