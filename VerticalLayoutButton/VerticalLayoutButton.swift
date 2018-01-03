@@ -53,6 +53,8 @@ class VerticalLayoutButton: UIButton {
         var contentLeftInset: CGFloat = 0.0
         var contentRightInset: CGFloat = 0.0
 
+        var contentWidth: CGFloat = 0.0
+
         switch (imageWidth, labelWidth) {
         case (0, _), (_, 0):
             // タイトル、アイコンが揃ってなかったら何もしない
@@ -60,24 +62,20 @@ class VerticalLayoutButton: UIButton {
         case (let imageWidth, let labelWidth) where imageWidth < labelWidth:
             imageLeftInset = diffWidth / 2
             labelLeftInset = -1.0 * imageWidth
-            if baseWidth < rect.width {
-                contentLeftInset = (rect.size.width - labelWidth) / 2
-                contentRightInset = -1.0 * contentLeftInset
-            } else {
-                contentLeftInset = 0
-                contentRightInset = -1.0 * (rect.size.width - labelWidth)
-            }
+            contentWidth = labelWidth
         case (let imageWidth, let labelWidth) where imageWidth >= labelWidth:
             labelLeftInset = -1.0 * (labelWidth + diffWidth / 2)
-            if baseWidth < rect.width {
-                contentLeftInset = (rect.size.width - imageWidth) / 2
-                contentRightInset = -1.0 * contentLeftInset
-            } else {
-                contentLeftInset = 0
-                contentRightInset = -1.0 * (rect.size.width - imageWidth)
-            }
+            contentWidth = imageWidth
         case (_, _):
             break
+        }
+
+        if baseWidth < rect.width {
+            contentLeftInset = (rect.width - contentWidth) / 2
+            contentRightInset = -1.0 * contentLeftInset
+        } else {
+            contentLeftInset = 0
+            contentRightInset = -1.0 * (rect.width - contentWidth)
         }
 
         // 高さ制約ありの場合の対応
