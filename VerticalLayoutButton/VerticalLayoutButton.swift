@@ -9,6 +9,9 @@
 import UIKit
 
 class VerticalLayoutButton: UIButton {
+    private var verticalMargin: CGFloat = 8.0
+    private var horizontalMargin: CGFloat = 8.0
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         resetInsets()
@@ -74,8 +77,8 @@ class VerticalLayoutButton: UIButton {
             contentLeftInset = (rect.width - contentWidth) / 2
             contentRightInset = -1.0 * contentLeftInset
         } else {
-            contentLeftInset = 0
-            contentRightInset = -1.0 * (rect.width - contentWidth)
+            contentLeftInset = horizontalMargin
+            contentRightInset = -1.0 * (rect.width - contentWidth) + horizontalMargin
         }
 
         // 高さ制約ありの場合の対応
@@ -83,8 +86,8 @@ class VerticalLayoutButton: UIButton {
             contentTopInset = (rect.height - (labelHeight + imageHeight)) / 2
             contentBottomInset = (rect.height - (labelHeight + imageHeight)) / 2
         } else {
-            contentTopInset = 0
-            contentBottomInset = (labelHeight + imageHeight) - rect.height
+            contentTopInset = verticalMargin
+            contentBottomInset = (labelHeight + imageHeight) - rect.height + verticalMargin
         }
 
         // imageEdgeInsets
