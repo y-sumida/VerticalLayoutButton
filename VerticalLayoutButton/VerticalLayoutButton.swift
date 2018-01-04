@@ -9,8 +9,8 @@
 import UIKit
 
 class VerticalLayoutButton: UIButton {
-    private var verticalMargin: CGFloat = 8.0
-    private var horizontalMargin: CGFloat = 8.0
+    var verticalMargin: CGFloat = 0.0
+    var horizontalMargin: CGFloat = 0.0
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
