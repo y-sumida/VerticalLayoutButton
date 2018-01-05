@@ -9,8 +9,18 @@
 import UIKit
 
 class VerticalLayoutButton: UIButton {
+    private var _contentEdgeInsets: UIEdgeInsets = UIEdgeInsets.zero
     var verticalMargin: CGFloat = 0.0
     var horizontalMargin: CGFloat = 0.0
+
+    override var contentEdgeInsets: UIEdgeInsets {
+        get {
+            return _contentEdgeInsets
+        }
+        set {
+            // ignore user settings
+        }
+    }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -97,7 +107,7 @@ class VerticalLayoutButton: UIButton {
         self.titleEdgeInsets = UIEdgeInsets(top: imageHeight, left: labelLeftInset, bottom: 0, right: 0)
 
         // contentEdgeInsets
-        self.contentEdgeInsets = UIEdgeInsets(top: contentTopInset, left: contentLeftInset, bottom: contentBottomInset, right: contentRightInset)
+        self._contentEdgeInsets = UIEdgeInsets(top: contentTopInset, left: contentLeftInset, bottom: contentBottomInset, right: contentRightInset)
     }
 
     private func resetInsets() {

@@ -15,6 +15,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         let b = VerticalLayoutButton()
+        b.contentEdgeInsets = UIEdgeInsets(top: 100, left: 20, bottom: 30, right:200)
         b.setTitle("code", for: .normal)
         b.setTitleColor(UIColor.red, for: .normal)
         b.setImage(UIImage(named: "setting"), for: .normal)
