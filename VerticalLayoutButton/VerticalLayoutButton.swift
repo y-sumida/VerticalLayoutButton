@@ -42,12 +42,10 @@ class VerticalLayoutButton: UIButton {
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        resetInsets()
     }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        resetInsets()
     }
 
     override func draw(_ rect: CGRect) {
@@ -129,11 +127,5 @@ class VerticalLayoutButton: UIButton {
         // contentEdgeInsets
         self._contentEdgeInsets = UIEdgeInsets(top: contentTopInset, left: contentLeftInset, bottom: contentBottomInset, right: contentRightInset)
         super.contentEdgeInsets = self._contentEdgeInsets
-    }
-
-    private func resetInsets() {
-        self.contentEdgeInsets = UIEdgeInsets.zero
-        self.titleEdgeInsets = UIEdgeInsets.zero
-        self.imageEdgeInsets = UIEdgeInsets.zero
     }
 }
