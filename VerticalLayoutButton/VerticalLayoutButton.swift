@@ -120,12 +120,15 @@ class VerticalLayoutButton: UIButton {
 
         // imageEdgeInsets
         self._imageEdgeInsets = UIEdgeInsets(top: 0, left: imageLeftInset, bottom: 0, right: 0)
+        super.imageEdgeInsets = self._imageEdgeInsets
 
         // titleEdgeInsets
         self._titleEdgeInsets = UIEdgeInsets(top: imageHeight, left: labelLeftInset, bottom: 0, right: 0)
+        super.titleEdgeInsets = self._titleEdgeInsets
 
         // contentEdgeInsets
         self._contentEdgeInsets = UIEdgeInsets(top: contentTopInset, left: contentLeftInset, bottom: contentBottomInset, right: contentRightInset)
+        super.contentEdgeInsets = self._contentEdgeInsets
     }
 
     private func resetInsets() {
