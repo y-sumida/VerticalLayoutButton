@@ -54,24 +54,10 @@ class VerticalLayoutButton: UIButton {
         self.contentVerticalAlignment = .top
         self.contentHorizontalAlignment = .left
 
-        var labelWidth: CGFloat = 0.0
-        var labelHeight: CGFloat = 0.0
-        if let _ = self.titleLabel?.text {
-            self.titleLabel?.sizeToFit()
-            labelWidth = self.titleLabel?.frame.size.width ?? 0
-            labelHeight = self.titleLabel?.frame.size.height ?? 0
-        }
+        let labelSize = self.titleLabel?.frame.size ?? CGSize.zero
+        let imageSize = self.imageView?.frame.size ?? CGSize.zero
 
-        var imageWidth: CGFloat = 0.0
-        var imageHeight: CGFloat = 0.0
-        if let _ = self.imageView?.image {
-            imageWidth = self.imageView?.frame.size.width ?? 0
-            imageHeight = self.imageView?.frame.size.height ?? 0
-        }
-        let diffWidth = abs(imageWidth - labelWidth)
-
-        let baseWidth = (labelWidth + imageWidth).rounded(.up)
-        let baseHeight = (labelHeight + imageHeight).rounded(.up)
+        let diffWidth = abs(imageSize.width - labelSize.width)
 
         var imageLeftInset:CGFloat = 0.0
         var labelLeftInset:CGFloat = 0.0
@@ -82,7 +68,7 @@ class VerticalLayoutButton: UIButton {
 
         var contentWidth: CGFloat = 0.0
 
-        switch (imageWidth, labelWidth) {
+        switch (imageSize.width, labelSize.width) {
         case (let imageWidth, let labelWidth) where imageWidth < labelWidth:
             imageLeftInset = diffWidth / 2
             labelLeftInset = -1.0 * imageWidth
@@ -94,7 +80,8 @@ class VerticalLayoutButton: UIButton {
             break
         }
 
-        if baseWidth < rect.width {
+        let contentFitSize = CGSize(width: (labelSize.width + imageSize.width).rounded(.up), height: (labelSize.height + imageSize.height).rounded(.up))
+        if contentFitSize.width < rect.width {
             contentLeftInset = (rect.width - contentWidth) / 2
             contentRightInset = -1.0 * contentLeftInset
         } else {
@@ -102,18 +89,18 @@ class VerticalLayoutButton: UIButton {
             contentRightInset = -1.0 * (rect.width - contentWidth) + horizontalMargin
         }
 
-        if baseHeight < rect.height {
-            contentTopInset = (rect.height - baseHeight) / 2
+        if contentFitSize.height < rect.height {
+            contentTopInset = (rect.height - contentFitSize.height) / 2
             contentBottomInset = contentTopInset
         } else {
             contentTopInset = verticalMargin
-            contentBottomInset = baseHeight - rect.height + verticalMargin
+            contentBottomInset = contentFitSize.height - rect.height + verticalMargin
         }
 
         self._imageEdgeInsets = UIEdgeInsets(top: 0, left: imageLeftInset, bottom: 0, right: 0)
         super.imageEdgeInsets = self._imageEdgeInsets
 
-        self._titleEdgeInsets = UIEdgeInsets(top: imageHeight, left: labelLeftInset, bottom: 0, right: 0)
+        self._titleEdgeInsets = UIEdgeInsets(top: imageSize.height, left: labelLeftInset, bottom: 0, right: 0)
         super.titleEdgeInsets = self._titleEdgeInsets
 
         self._contentEdgeInsets = UIEdgeInsets(top: contentTopInset, left: contentLeftInset, bottom: contentBottomInset, right: contentRightInset)
