@@ -86,9 +86,10 @@ class VerticalLayoutButton: UIButton {
         var contentWidth: CGFloat = 0.0
 
         switch (imageWidth, labelWidth) {
-        case (0, _), (_, 0):
-            // タイトル、アイコンが揃ってなかったら何もしない
-            return
+        case (0, _):
+            contentWidth = labelWidth
+        case (_, 0):
+            contentWidth = imageWidth
         case (let imageWidth, let labelWidth) where imageWidth < labelWidth:
             imageLeftInset = diffWidth / 2
             labelLeftInset = -1.0 * imageWidth
