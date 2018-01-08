@@ -50,13 +50,10 @@ class VerticalLayoutButton: UIButton {
 
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-        // 制約で幅高さが決まってない場合imageとlabelによってrectが決まる
-        // 幅高さ指定がある場合は、image/labelと関係なくrectが決まる
 
         self.contentVerticalAlignment = .top
         self.contentHorizontalAlignment = .left
 
-        // アイコンとラベルを縦に並べてセンタリング
         var labelWidth: CGFloat = 0.0
         var labelHeight: CGFloat = 0.0
         if let _ = self.titleLabel?.text {
@@ -117,15 +114,12 @@ class VerticalLayoutButton: UIButton {
             contentBottomInset = baseHeight - rect.height + verticalMargin
         }
 
-        // imageEdgeInsets
         self._imageEdgeInsets = UIEdgeInsets(top: 0, left: imageLeftInset, bottom: 0, right: 0)
         super.imageEdgeInsets = self._imageEdgeInsets
 
-        // titleEdgeInsets
         self._titleEdgeInsets = UIEdgeInsets(top: imageHeight, left: labelLeftInset, bottom: 0, right: 0)
         super.titleEdgeInsets = self._titleEdgeInsets
 
-        // contentEdgeInsets
         self._contentEdgeInsets = UIEdgeInsets(top: contentTopInset, left: contentLeftInset, bottom: contentBottomInset, right: contentRightInset)
         super.contentEdgeInsets = self._contentEdgeInsets
     }
