@@ -108,10 +108,9 @@ class VerticalLayoutButton: UIButton {
             contentRightInset = -1.0 * (rect.width - contentWidth) + horizontalMargin
         }
 
-        // 高さ制約ありの場合の対応
         if baseHeight < rect.height {
             contentTopInset = (rect.height - baseHeight) / 2
-            contentBottomInset = (rect.height - baseHeight) / 2
+            contentBottomInset = contentTopInset
         } else {
             contentTopInset = verticalMargin
             contentBottomInset = baseHeight - rect.height + verticalMargin
