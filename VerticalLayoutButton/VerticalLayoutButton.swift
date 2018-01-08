@@ -74,6 +74,7 @@ class VerticalLayoutButton: UIButton {
         let diffWidth = abs(imageWidth - labelWidth)
 
         let baseWidth = (labelWidth + imageWidth).rounded(.up)
+        let baseHeight = (labelHeight + imageHeight).rounded(.up)
 
         var imageLeftInset:CGFloat = 0.0
         var labelLeftInset:CGFloat = 0.0
@@ -108,12 +109,12 @@ class VerticalLayoutButton: UIButton {
         }
 
         // 高さ制約ありの場合の対応
-        if (labelHeight + imageHeight) < rect.height {
-            contentTopInset = (rect.height - (labelHeight + imageHeight)) / 2
-            contentBottomInset = (rect.height - (labelHeight + imageHeight)) / 2
+        if baseHeight < rect.height {
+            contentTopInset = (rect.height - baseHeight) / 2
+            contentBottomInset = (rect.height - baseHeight) / 2
         } else {
             contentTopInset = verticalMargin
-            contentBottomInset = (labelHeight + imageHeight) - rect.height + verticalMargin
+            contentBottomInset = baseHeight - rect.height + verticalMargin
         }
 
         // imageEdgeInsets
