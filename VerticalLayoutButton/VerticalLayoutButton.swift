@@ -60,16 +60,13 @@ class VerticalLayoutButton: UIButton {
 
         var contentWidth: CGFloat = 0.0
 
-        switch (imageSize.width, labelSize.width) {
-        case (let imageWidth, let labelWidth) where imageWidth < labelWidth:
+        if imageSize.width < labelSize.width {
             imageLeftInset = diffWidth / 2
-            labelLeftInset = -1.0 * imageWidth
-            contentWidth = labelWidth
-        case (let imageWidth, let labelWidth) where imageWidth >= labelWidth:
-            labelLeftInset = -1.0 * (labelWidth + diffWidth / 2)
-            contentWidth = imageWidth
-        case (_, _):
-            break
+            labelLeftInset = -1.0 * imageSize.width
+            contentWidth = labelSize.width
+        } else {
+            labelLeftInset = -1.0 * (labelSize.width + diffWidth / 2)
+            contentWidth = imageSize.width
         }
 
         let contentFitSize = CGSize(width: (labelSize.width + imageSize.width).rounded(.up), height: (labelSize.height + imageSize.height).rounded(.up))
