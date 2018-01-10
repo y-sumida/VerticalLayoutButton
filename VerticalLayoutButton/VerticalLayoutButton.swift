@@ -46,6 +46,7 @@ class VerticalLayoutButton: UIButton {
         self.contentVerticalAlignment = .top
         self.contentHorizontalAlignment = .left
 
+        self.titleLabel?.sizeToFit()
         let labelSize = self.titleLabel?.frame.size ?? CGSize.zero
         let imageSize = self.imageView?.frame.size ?? CGSize.zero
 
