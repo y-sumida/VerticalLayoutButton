@@ -74,9 +74,13 @@ class VerticalLayoutButton: UIButton {
         if contentFitSize.width < rect.width {
             contentLeftInset = (rect.width - contentWidth) / 2
             contentRightInset = -1.0 * contentLeftInset
-        } else {
+        } else if contentWidth <= rect.width {
             contentLeftInset = horizontalMargin
             contentRightInset = -1.0 * (rect.width - contentWidth) + horizontalMargin
+        } else {
+            // TODO refactor
+            imageLeftInset = 0.0
+            labelLeftInset = 0.0
         }
 
         if contentFitSize.height < rect.height {
