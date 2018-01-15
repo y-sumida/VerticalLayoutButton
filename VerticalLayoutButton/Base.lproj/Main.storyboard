@@ -17,41 +17,67 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JjM-U7-LeL" customClass="VerticalLayoutButton" customModule="VerticalLayoutButton" customModuleProvider="target">
-                                <rect key="frame" x="126" y="318" width="124" height="30"/>
-                                <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="124" id="csL-vN-s8e"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <inset key="contentEdgeInsets" minX="22" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="5"/>
-                                <inset key="imageEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="5"/>
-                                <state key="normal" title="Setting" image="setting">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="tapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zRG-tz-cEA"/>
-                                </connections>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5A-uo-p1L" customClass="VerticalLayoutButton" customModule="VerticalLayoutButton" customModuleProvider="target">
+                                <rect key="frame" x="141" y="62" width="93" height="24"/>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Buttuon" image="setting"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEh-oM-Kmw" customClass="VerticalLayoutButton" customModule="VerticalLayoutButton" customModuleProvider="target">
-                                <rect key="frame" x="164" y="376" width="46" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.62771045290000005" blue="0.66117453349999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eyr-GN-uye" customClass="VerticalLayoutButton" customModule="VerticalLayoutButton" customModuleProvider="target">
+                                <rect key="frame" x="170" y="106" width="34" height="24"/>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="B" image="setting"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I3k-rb-bMX" customClass="VerticalLayoutButton" customModule="VerticalLayoutButton" customModuleProvider="target">
+                                <rect key="frame" x="160.5" y="150" width="54" height="24"/>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <state key="normal" title="Button" image="setting"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoj-F1-1jX">
+                                <rect key="frame" x="30" y="194" width="315" height="24"/>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button" image="setting"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tib-aI-UK5">
+                                <rect key="frame" x="172" y="238" width="30" height="24"/>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="Rfa-WL-G3b"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="setting"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kiv-jK-cvP">
+                                <rect key="frame" x="164" y="282" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Vt-45-ZlF">
+                                <rect key="frame" x="164" y="332" width="24" height="24"/>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="setting"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="JjM-U7-LeL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RW4-DP-Zpq"/>
-                            <constraint firstItem="dEh-oM-Kmw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TsP-Lb-qp4"/>
-                            <constraint firstItem="JjM-U7-LeL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oee-76-TR9"/>
-                            <constraint firstItem="dEh-oM-Kmw" firstAttribute="top" secondItem="JjM-U7-LeL" secondAttribute="bottom" constant="28" id="wm0-aQ-QhE"/>
+                            <constraint firstItem="Tib-aI-UK5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7tS-vB-czB"/>
+                            <constraint firstItem="Kiv-jK-cvP" firstAttribute="top" secondItem="Tib-aI-UK5" secondAttribute="bottom" constant="20" id="EMp-29-qrf"/>
+                            <constraint firstItem="Eyr-GN-uye" firstAttribute="top" secondItem="P5A-uo-p1L" secondAttribute="bottom" constant="20" id="Gya-QS-cnX"/>
+                            <constraint firstItem="aoj-F1-1jX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Juv-Gt-9go"/>
+                            <constraint firstItem="aoj-F1-1jX" firstAttribute="top" secondItem="I3k-rb-bMX" secondAttribute="bottom" constant="20" id="L7e-nd-dfj"/>
+                            <constraint firstItem="0Vt-45-ZlF" firstAttribute="top" secondItem="Kiv-jK-cvP" secondAttribute="bottom" constant="20" id="O8k-9I-4dG"/>
+                            <constraint firstItem="0Vt-45-ZlF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="164" id="Y3s-pE-NyM"/>
+                            <constraint firstItem="P5A-uo-p1L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a5B-Ax-Mo0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aoj-F1-1jX" secondAttribute="trailing" constant="30" id="bIm-7F-iVx"/>
+                            <constraint firstItem="I3k-rb-bMX" firstAttribute="top" secondItem="Eyr-GN-uye" secondAttribute="bottom" constant="20" id="h05-Vk-Nes"/>
+                            <constraint firstItem="P5A-uo-p1L" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="42" id="iWP-Fg-vTB"/>
+                            <constraint firstItem="Eyr-GN-uye" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="luD-CP-nSh"/>
+                            <constraint firstItem="I3k-rb-bMX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qJc-00-m3s"/>
+                            <constraint firstItem="Kiv-jK-cvP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="164" id="tU5-lI-bhA"/>
+                            <constraint firstItem="Tib-aI-UK5" firstAttribute="top" secondItem="aoj-F1-1jX" secondAttribute="bottom" constant="20" id="u9o-Ur-oy5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <outlet property="button" destination="JjM-U7-LeL" id="jfS-Da-DRs"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
