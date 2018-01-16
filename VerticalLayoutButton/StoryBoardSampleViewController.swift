@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  StoryBoardSampleViewController.swift
 //  VerticalLayoutButton
 //
 //  Created by Yuki Sumida on 2017/12/13.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class StoryBoardSampleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
