@@ -83,6 +83,21 @@
             </objects>
             <point key="canvasLocation" x="24.800000000000001" y="31.934032983508249"/>
         </scene>
+        <!--Code Sample View Controller-->
+        <scene sceneID="qlU-xf-sY8">
+            <objects>
+                <viewController storyboardIdentifier="CodeSampleViewController" id="H1M-PU-QY0" customClass="CodeSampleViewController" customModule="VerticalLayoutButton" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oE9-50-UCi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="AOB-rs-c1I"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w5I-Cq-jkI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="860" y="69"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="OAL-7C-1uL">
             <objects>
@@ -108,17 +123,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TzZ-g1-4m3">
-                                <rect key="frame" x="121.5" y="204" width="132" height="30"/>
-                                <state key="normal" title="StoryBoard Sample"/>
+                                <rect key="frame" x="111" y="204" width="153" height="30"/>
+                                <state key="normal" title="Sample for storyboard"/>
                                 <connections>
-                                    <action selector="tapStoryBoardSample:" destination="ZdX-Ov-Ufj" eventType="touchUpInside" id="ERr-fG-JH7"/>
+                                    <action selector="tapSampleForStoryBoard:" destination="ZdX-Ov-Ufj" eventType="touchUpInside" id="x9A-Rb-07R"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jS5-86-fOM">
+                                <rect key="frame" x="130.5" y="266" width="113" height="30"/>
+                                <state key="normal" title="Sample for code"/>
+                                <connections>
+                                    <action selector="tapSampleForCode:" destination="ZdX-Ov-Ufj" eventType="touchUpInside" id="ihT-Sh-6UJ"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="TzZ-g1-4m3" firstAttribute="top" secondItem="jRU-ap-ipe" secondAttribute="top" constant="140" id="8ZK-EW-AUa"/>
+                            <constraint firstItem="jS5-86-fOM" firstAttribute="centerX" secondItem="Kt2-io-tzR" secondAttribute="centerX" id="PSd-KQ-r0W"/>
                             <constraint firstItem="TzZ-g1-4m3" firstAttribute="centerX" secondItem="Kt2-io-tzR" secondAttribute="centerX" id="X0B-gs-wEf"/>
+                            <constraint firstItem="jS5-86-fOM" firstAttribute="top" secondItem="TzZ-g1-4m3" secondAttribute="bottom" constant="32" id="sLH-hq-PsP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jRU-ap-ipe"/>
                     </view>

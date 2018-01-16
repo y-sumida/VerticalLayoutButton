@@ -18,8 +18,12 @@ class TopViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    @IBAction func tapStoryBoardSample(_ sender: Any) {
+    @IBAction func tapSampleForStoryBoard(_ sender: Any) {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "StoryBoardSampleViewController") as! StoryBoardSampleViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    @IBAction func tapSampleForCode(_ sender: Any) {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CodeSampleViewController") as! CodeSampleViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

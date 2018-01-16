@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A97C6B7A200E39FA00308D9C /* CodeSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97C6B79200E39FA00308D9C /* CodeSampleViewController.swift */; };
 		A99151E61FE1600700D4059D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99151E51FE1600700D4059D /* AppDelegate.swift */; };
 		A99151E81FE1600700D4059D /* StoryBoardSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99151E71FE1600700D4059D /* StoryBoardSampleViewController.swift */; };
 		A99151EB1FE1600700D4059D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A99151E91FE1600700D4059D /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A97C6B79200E39FA00308D9C /* CodeSampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSampleViewController.swift; sourceTree = "<group>"; };
 		A99151E21FE1600700D4059D /* VerticalLayoutButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VerticalLayoutButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A99151E51FE1600700D4059D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A99151E71FE1600700D4059D /* StoryBoardSampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoardSampleViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				A99151E71FE1600700D4059D /* StoryBoardSampleViewController.swift */,
 				A99151F91FE1624E00D4059D /* VerticalLayoutButton.swift */,
 				A99151E91FE1600700D4059D /* Main.storyboard */,
+				A97C6B79200E39FA00308D9C /* CodeSampleViewController.swift */,
 				A9BB155D200E36C50024FE0B /* TopViewController.swift */,
 				A99151EC1FE1600700D4059D /* Assets.xcassets */,
 				A99151EE1FE1600700D4059D /* LaunchScreen.storyboard */,
@@ -144,6 +147,7 @@
 			files = (
 				A99151E81FE1600700D4059D /* StoryBoardSampleViewController.swift in Sources */,
 				A99151FA1FE1624E00D4059D /* VerticalLayoutButton.swift in Sources */,
+				A97C6B7A200E39FA00308D9C /* CodeSampleViewController.swift in Sources */,
 				A9BB155E200E36C50024FE0B /* TopViewController.swift in Sources */,
 				A99151E61FE1600700D4059D /* AppDelegate.swift in Sources */,
 			);
