@@ -18,10 +18,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5A-uo-p1L" customClass="VerticalLayoutButton" customModule="VerticalLayoutButton" customModuleProvider="target">
-                                <rect key="frame" x="141" y="62" width="93" height="24"/>
+                                <rect key="frame" x="146.5" y="62" width="82" height="24"/>
                                 <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Buttuon" image="setting"/>
+                                <state key="normal" title="Button" image="setting"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eyr-GN-uye" customClass="VerticalLayoutButton" customModule="VerticalLayoutButton" customModuleProvider="target">
                                 <rect key="frame" x="170" y="106" width="34" height="24"/>
