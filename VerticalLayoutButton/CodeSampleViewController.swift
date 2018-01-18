@@ -65,6 +65,14 @@ class CodeSampleViewController: UIViewController {
         button7.translatesAutoresizingMaskIntoConstraints = false
         button7.topAnchor.constraint(equalTo: button6.bottomAnchor, constant: 20).isActive = true
         button7.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 164).isActive = true
+
+        let button8 = createButton()
+        button8.verticalMargin = 4
+        button8.horizontalMargin = 2
+        self.view.addSubview(button8)
+        button8.translatesAutoresizingMaskIntoConstraints = false
+        button8.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        button8.topAnchor.constraint(equalTo: button7.bottomAnchor, constant: 20).isActive = true
     }
 
     func createButton(label: String?="Button", fontSize: CGFloat=15, image:String?="setting") -> VerticalLayoutButton {
