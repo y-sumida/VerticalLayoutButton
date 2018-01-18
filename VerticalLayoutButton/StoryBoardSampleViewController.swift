@@ -11,6 +11,7 @@ import UIKit
 class StoryBoardSampleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "Sample for storyboard"
     }
 
     override func didReceiveMemoryWarning() {

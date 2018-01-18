@@ -13,6 +13,7 @@ class CodeSampleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addSampleButtons()
+        self.navigationItem.title = "Sample for code"
     }
 
     override func didReceiveMemoryWarning() {
