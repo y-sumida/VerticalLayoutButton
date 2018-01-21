@@ -8,7 +8,7 @@
 
 import UIKit
 
-class VerticalLayoutButton: UIButton {
+final class VerticalLayoutButton: UIButton {
     private var _contentEdgeInsets: UIEdgeInsets = UIEdgeInsets.zero
     private var _titleEdgeInsets: UIEdgeInsets = UIEdgeInsets.zero
     private var _imageEdgeInsets: UIEdgeInsets = UIEdgeInsets.zero
