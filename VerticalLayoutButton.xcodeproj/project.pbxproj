@@ -12,7 +12,6 @@
 		A99151E81FE1600700D4059D /* StoryBoardSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99151E71FE1600700D4059D /* StoryBoardSampleViewController.swift */; };
 		A99151EB1FE1600700D4059D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A99151E91FE1600700D4059D /* Main.storyboard */; };
 		A99151ED1FE1600700D4059D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A99151EC1FE1600700D4059D /* Assets.xcassets */; };
-		A99151F01FE1600700D4059D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A99151EE1FE1600700D4059D /* LaunchScreen.storyboard */; };
 		A99151FA1FE1624E00D4059D /* VerticalLayoutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99151F91FE1624E00D4059D /* VerticalLayoutButton.swift */; };
 		A9BB155E200E36C50024FE0B /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BB155D200E36C50024FE0B /* TopViewController.swift */; };
 /* End PBXBuildFile section */
@@ -24,7 +23,6 @@
 		A99151E71FE1600700D4059D /* StoryBoardSampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoardSampleViewController.swift; sourceTree = "<group>"; };
 		A99151EA1FE1600700D4059D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A99151EC1FE1600700D4059D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A99151EF1FE1600700D4059D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A99151F11FE1600700D4059D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A99151F91FE1624E00D4059D /* VerticalLayoutButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalLayoutButton.swift; sourceTree = "<group>"; };
 		A9BB155D200E36C50024FE0B /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
@@ -67,7 +65,6 @@
 				A97C6B79200E39FA00308D9C /* CodeSampleViewController.swift */,
 				A9BB155D200E36C50024FE0B /* TopViewController.swift */,
 				A99151EC1FE1600700D4059D /* Assets.xcassets */,
-				A99151EE1FE1600700D4059D /* LaunchScreen.storyboard */,
 				A99151F11FE1600700D4059D /* Info.plist */,
 			);
 			path = VerticalLayoutButton;
@@ -132,7 +129,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A99151F01FE1600700D4059D /* LaunchScreen.storyboard in Resources */,
 				A99151ED1FE1600700D4059D /* Assets.xcassets in Resources */,
 				A99151EB1FE1600700D4059D /* Main.storyboard in Resources */,
 			);
@@ -162,14 +158,6 @@
 				A99151EA1FE1600700D4059D /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A99151EE1FE1600700D4059D /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A99151EF1FE1600700D4059D /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
