@@ -49,7 +49,6 @@ final class VerticalLayoutButton: UIButton {
         self.titleLabel?.sizeToFit()
         let labelSize = self.titleLabel?.frame.size ?? CGSize.zero
         let imageSize = self.imageView?.frame.size ?? CGSize.zero
-
         let diffWidth = abs(imageSize.width - labelSize.width)
 
         var imageLeftInset:CGFloat = 0.0
@@ -59,36 +58,36 @@ final class VerticalLayoutButton: UIButton {
         var contentLeftInset: CGFloat = 0.0
         var contentRightInset: CGFloat = 0.0
 
-        var contentWidth: CGFloat = 0.0
+        var layoutedSize: CGSize = CGSize.zero
 
         if imageSize.width < labelSize.width {
             imageLeftInset = diffWidth / 2
             labelLeftInset = -1.0 * imageSize.width
-            contentWidth = labelSize.width
+            layoutedSize = CGSize(width: labelSize.width, height: (labelSize.height + imageSize.height).rounded(.up))
         } else {
             labelLeftInset = -1.0 * (labelSize.width + diffWidth / 2)
-            contentWidth = imageSize.width
+            layoutedSize = CGSize(width: imageSize.width, height: (labelSize.height + imageSize.height).rounded(.up))
         }
 
         let contentFitSize = CGSize(width: (labelSize.width + imageSize.width).rounded(.up), height: (labelSize.height + imageSize.height).rounded(.up))
         if contentFitSize.width < rect.width {
-            contentLeftInset = (rect.width - contentWidth) / 2
+            contentLeftInset = (rect.width - layoutedSize.width) / 2
             contentRightInset = -1.0 * contentLeftInset
-        } else if contentWidth <= rect.width {
+        } else if layoutedSize.width <= rect.width {
             contentLeftInset = horizontalMargin
-            contentRightInset = -1.0 * (rect.width - contentWidth) + horizontalMargin
+            contentRightInset = -1.0 * (rect.width - layoutedSize.width) + horizontalMargin
         } else {
             // TODO refactor
             imageLeftInset = 0.0
             labelLeftInset = 0.0
         }
 
-        if contentFitSize.height < rect.height {
-            contentTopInset = (rect.height - contentFitSize.height) / 2
+        if layoutedSize.height < rect.height {
+            contentTopInset = (rect.height - layoutedSize.height) / 2
             contentBottomInset = contentTopInset
         } else {
             contentTopInset = verticalMargin
-            contentBottomInset = contentFitSize.height - rect.height + verticalMargin
+            contentBottomInset = layoutedSize.height - rect.height + verticalMargin
         }
 
         self._imageEdgeInsets = UIEdgeInsets(top: 0, left: imageLeftInset, bottom: 0, right: 0)
