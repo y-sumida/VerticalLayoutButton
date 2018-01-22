@@ -53,10 +53,6 @@ final class VerticalLayoutButton: UIButton {
 
         var imageLeftInset:CGFloat = 0.0
         var labelLeftInset:CGFloat = 0.0
-        var contentTopInset: CGFloat = 0.0
-        var contentBottomInset: CGFloat = 0.0
-        var contentLeftInset: CGFloat = 0.0
-        var contentRightInset: CGFloat = 0.0
 
         var layoutedSize: CGSize = CGSize.zero
 
@@ -69,8 +65,10 @@ final class VerticalLayoutButton: UIButton {
             layoutedSize = CGSize(width: imageSize.width, height: (labelSize.height + imageSize.height).rounded(.up))
         }
 
-        let contentFitSize = CGSize(width: (labelSize.width + imageSize.width).rounded(.up), height: (labelSize.height + imageSize.height).rounded(.up))
-        if contentFitSize.width < rect.width {
+        var contentLeftInset: CGFloat = 0.0
+        var contentRightInset: CGFloat = 0.0
+        let defaultWidth = (labelSize.width + imageSize.width).rounded(.up)
+        if defaultWidth < rect.width {
             contentLeftInset = (rect.width - layoutedSize.width) / 2
             contentRightInset = -1.0 * contentLeftInset
         } else if layoutedSize.width <= rect.width {
@@ -82,6 +80,8 @@ final class VerticalLayoutButton: UIButton {
             labelLeftInset = 0.0
         }
 
+        var contentTopInset: CGFloat = 0.0
+        var contentBottomInset: CGFloat = 0.0
         if layoutedSize.height < rect.height {
             contentTopInset = (rect.height - layoutedSize.height) / 2
             contentBottomInset = contentTopInset
